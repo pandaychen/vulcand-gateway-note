@@ -16,8 +16,6 @@ Features
 * Pluggable middlewares.
 * Support for canary deploys, realtime metrics and resiliency.
 
-![Vulcan diagram](http://coreos.com/assets/images/media/vulcan-1-upstream.png "Vulcan diagram")
-
 Project info
 ------------
 
