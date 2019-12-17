@@ -3,6 +3,8 @@
 // websocket proxying support based on https://github.com/yhat/wsutil
 package forward
 
+//oxy最基础的实现
+
 import (
 	"bytes"
 	"crypto/tls"
@@ -189,7 +191,7 @@ type handlerContext struct {
 // httpForwarder is a handler that can reverse proxy
 // HTTP traffic
 type httpForwarder struct {
-	roundTripper   http.RoundTripper
+	roundTripper   http.RoundTripper	//实现定制化http-client的功能？
 	rewriter       ReqRewriter
 	passHost       bool
 	flushInterval  time.Duration

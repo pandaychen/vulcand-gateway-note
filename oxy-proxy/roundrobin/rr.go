@@ -98,6 +98,12 @@ func (r *RoundRobin) Next() http.Handler {
 	return r.next
 }
 
+/*只要实现了ServeHTTP方法，就可以作为Http的Handler，如：
+	s := &http.Server{
+	Addr:           ":8080",
+	Handler:        lb,
+}
+*/
 func (r *RoundRobin) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	if r.log.Level >= log.DebugLevel {
 		logEntry := r.log.WithField("Request", utils.DumpHttpRequest(req))
